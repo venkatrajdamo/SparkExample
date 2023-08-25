@@ -1,0 +1,8 @@
+# Project exclude paths
+/project/project/target/
+/project/target/
+/target/
+/target/scala-2.13/classes/
+/.idea/libraries/*
+!/.idea/libraries/sbt__scala_sdk_2_13_11.xml
+!/.idea/libraries/sbt__org_scala_lang_scala_library_2_13_11_jar.xml
