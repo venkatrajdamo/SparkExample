@@ -8,7 +8,8 @@ lazy val root = (project in file("."))
   .settings(
     name := "SparkExample",
     libraryDependencies ++= Seq(
-      "org.apache.spark" %% "spark-core" % sparkVersion
+      "org.apache.spark" %% "spark-core" % sparkVersion,
+      "org.apache.spark" %% "spark-sql" % sparkVersion
     ),
     Compile / resourceDirectory := baseDirectory.value / "src/resources",
     Runtime / resourceDirectory := baseDirectory.value / "src/resources"
