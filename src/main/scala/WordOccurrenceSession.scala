@@ -5,7 +5,7 @@ import org.apache.spark.rdd.RDD
 
 
 object WordOccurrenceSession extends App {
-  val x = "C:\\ScalaIp\\TextFile\\harpers_ASCII.tx"
+  val x = "C:\\ScalaIp\\TextFile\\harpers_ASCII.txt"
   val r = "C:\\ScalaOp\\WordOccurence\\harpers_ASCII_Count"
   val spark = SparkSession.builder().appName("SparkCount").master("local").getOrCreate()
 
