@@ -9,7 +9,8 @@ lazy val root = (project in file("."))
     name := "SparkExample",
     libraryDependencies ++= Seq(
       "org.apache.spark" %% "spark-core" % sparkVersion,
-      "org.apache.spark" %% "spark-sql" % sparkVersion
+      "org.apache.spark" %% "spark-sql" % sparkVersion,
+      "com.typesafe" % "config" % "1.4.2"
     ),
     Compile / resourceDirectory := baseDirectory.value / "src/resources",
     Runtime / resourceDirectory := baseDirectory.value / "src/resources"

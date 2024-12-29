@@ -1,3 +1,4 @@
+import common.MyConfig
 import org.apache.spark.sql._
 import org.apache.hadoop.fs.{FileSystem, Path}
 import org.apache.spark.api.java.JavaRDD.fromRDD
@@ -5,7 +6,9 @@ import org.apache.spark.rdd.RDD
 
 
 object WordOccurrenceSession extends App {
-  val x = "C:\\ScalaIp\\TextFile\\harpers_ASCII.txt"
+  val config: MyConfig = new MyConfig()
+  val ip = config.getDataInputPath
+  val x = ip + "\\TextFile\\harpers_ASCII.txt"
   val r = "C:\\ScalaOp\\WordOccurence\\harpers_ASCII_Count"
   val spark = SparkSession.builder().appName("SparkCount").master("local").getOrCreate()
 
